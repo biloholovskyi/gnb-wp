@@ -1,0 +1,7 @@
+.idea
+*.rar
+*.zip
+/node_modules
+/vendor
+/library
+/backup
