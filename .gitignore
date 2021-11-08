@@ -5,3 +5,5 @@
 /vendor
 /library
 /backup
+
+/wp-content/themes/gnb/node_modules

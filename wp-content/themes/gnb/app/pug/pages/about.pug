@@ -1,0 +1,168 @@
+extends ../layout/main
+
+block variables
+  - const pageTitle = 'О компании'
+
+block content
+  .about-page
+    .main-block(style='background-image: url(../media/image/about-bg.jpg);')
+      img.decor(src='../media/icon/rect2.svg' alt='rect')
+      .container
+        .row
+          .col-12.col-lg-6
+            h1.main-block__title О компании
+            .main-block__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+    .about-second
+      .container
+        .row
+          .col-12.col-lg-6
+            .about-second__title.decor-title.decor-title__bottom О компании
+            .about-second__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae. Ut pharetra sit amet aliquam id. Nisl nisi scelerisque eu ultrices vitae auctor eu. Sit amet tellus cras adipiscing enim eu. Tincidunt augue interdum velit euismod in pellentesque massa. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Pharetra sit amet aliquam id diam maecenas ultricies mi eget. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Leo vel fringilla est ullamcorper. Nisi scelerisque eu ultrices vitae auctor eu.
+          .col-6.col-lg-3
+            img.about-second__image.about-second__image--first(alt='img' src='../media/image/some-pick1.jpg')
+          .col-6.col-lg-3
+            img.about-second__image(alt='img' src='../media/image/some-pick2.jpg')
+
+  include ../modules/about/map
+  include ../modules/cases-slider
+
+  .partners
+    img.partners__decor-top(alt='decor' src='../media/icon/rect3.svg')
+    img.partners__decor-bot(alt='decor' src='../media/icon/rect3.svg')
+    .container
+      .row
+        .col-12
+          .partners__title.decor-title Наши клиенты и партнеры
+          .partners__row
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/color.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/logo.png')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/netflix.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/color.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/logo.png')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/netflix.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/color.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/logo.png')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/netflix.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/color.svg')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/logo.png')
+            .partners__item
+              img(alt='logo' src='../media/icon/partners/netflix.svg')
+
+
+
+
+  .reviews
+    .container
+      .row
+        .col-12
+          .reviews__title Отзывы
+          .reviews__body.owl-carousel.owl-theme
+            .reviews__item
+              .text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.
+              .author
+                img(src='../media/image/avatar.jpg' alt='avatar')
+                .author__info
+                  .name Дмитрий Танец
+                  .place Директор ООО "Новоуральский Бетонный Завод"
+
+
+
+            .reviews__item
+              .text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.
+              .author
+                img(src='../media/image/about-bg.jpg' alt='avatar')
+                .author__info
+                  .name Дмитрий Танец
+                  .place Директор ООО "Новоуральский Бетонный Завод"
+
+
+
+            .reviews__item
+              .text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.
+              .author
+                img(src='../media/image/about-bg.jpg' alt='avatar')
+                .author__info
+                  .name Дмитрий Танец
+                  .place Директор ООО "Новоуральский Бетонный Завод"
+
+
+
+            .reviews__item
+              .text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.
+              .author
+                img(src='../media/image/about-bg.jpg' alt='avatar')
+                .author__info
+                  .name Дмитрий Танец
+                  .place Директор ООО "Новоуральский Бетонный Завод"
+
+
+
+            .reviews__item
+              .text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.
+              .author
+                img(src='../media/image/about-bg.jpg' alt='avatar')
+                .author__info
+                  .name Дмитрий Танец
+                  .place Директор ООО "Новоуральский Бетонный Завод"
+
+
+
+
+  .documents
+    img(alt='hex' src='../media/icon/rect3.svg').documents__decor-top
+    img(alt='hex' src='../media/icon/rect-gray.svg').documents__decor-top.documents__decor-top--gray
+    img(alt='hex' src='../media/icon/hex.png').documents__hex
+    img(alt='hex' src='../media/icon/hex.png').documents__hex.documents__hex--bottom
+
+    .container
+      .row
+        .col-12
+          .documents__title Документы
+        .col-12
+          .documents__row
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+            .documents__item
+              img(src='../media/image/doc.jpg' alt='document')
+              .name Договор о неразглашении
+              .form-size PDF • 212 kb
+
+  include ../modules/main-form-gray
