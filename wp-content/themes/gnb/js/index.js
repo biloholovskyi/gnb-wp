@@ -82,7 +82,7 @@ $(document).ready((e) => {
   $('.btn-to-form').on('click', () => {header.scrollToForm()});
 
   // show case
-  $('.cases__item, .cases-slider__item').on('click', cases.showCases)
+  $('.cases__item, .cases-slider__item').on('click', (e) => cases.showCases(e))
   // close case or tools
   $('.case-modal .close').on('click', cases.closeCases)
 

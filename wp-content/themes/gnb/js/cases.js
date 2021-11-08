@@ -3,7 +3,16 @@ class Cases {
     this.modal = $('.case-modal');
   }
 
-  showCases = () => {
+  showCases = (e) => {
+    const current = $(e.currentTarget);
+    const name = current.children('.name').text();
+    const description = current.children('.case-hidden').children('.description').html();
+    const image = current.children('img').attr('src');
+
+    $('.case-modal .body__info .info-text .name').html(name)
+    $('.case-modal .body__info .info-text .desc').html(description)
+    $('.case-modal .body__info img').attr('src', image)
+
     this.modal.addClass('active');
 
     // deactivate scroll
