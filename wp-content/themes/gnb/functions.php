@@ -3,6 +3,8 @@ add_action('wp_enqueue_scripts', 'style_them');
 add_action('wp_footer', 'script_them');
 add_action('after_setup_theme', 'menu');
 
+remove_filter( 'the_excerpt', 'wpautop' );
+
 function menu()
 {
 //  register_nav_menu('header', 'Главное меню в шапке');

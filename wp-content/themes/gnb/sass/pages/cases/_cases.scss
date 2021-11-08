@@ -21,6 +21,14 @@
     margin-bottom: 56px;
     cursor: pointer;
 
+    .case-hidden {
+      display: none;
+      visibility: hidden;
+      z-index: -10000;
+      width: 0;
+      height: 0;
+    }
+
     .case-photo {
       width: 282px;
       min-width: 282px;
@@ -39,7 +47,7 @@
         height: 60px;
         transform: rotate(-38deg);
         bottom: -35px;
-        right: -23px;
+        right: -25px;
       }
     }
 

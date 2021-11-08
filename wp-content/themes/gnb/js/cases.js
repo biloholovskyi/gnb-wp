@@ -5,9 +5,22 @@ class Cases {
 
   showCases = (e) => {
     const current = $(e.currentTarget);
-    const name = current.children('.name').text();
+    let name = current.children('.name').text();
     const description = current.children('.case-hidden').children('.description').html();
-    const image = current.children('img').attr('src');
+    let image = current.children('img').attr('src');
+
+    if(current.hasClass('bg-item')) {
+      image = current
+        .children('.case-photo')
+        .css('background-image')
+        .split('url("')[1]
+        .split('"')[0];
+
+      name = current
+        .children('.case-text')
+        .children('.name')
+        .text();
+    }
 
     $('.case-modal .body__info .info-text .name').html(name)
     $('.case-modal .body__info .info-text .desc').html(description)
