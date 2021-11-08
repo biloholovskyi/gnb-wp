@@ -1,6 +1,6 @@
 <div class="main-form">
   <img class="rect-img" alt="rect"
-       src="<?php echo get_template_directory_uri(); ?>/media/icon/rect.svg">
+       src="<?php echo get_template_directory_uri(); ?>/media/icon/rect-gray.svg">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-6">
