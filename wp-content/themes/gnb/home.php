@@ -6,7 +6,7 @@ Template Name: Home page
 
 <?php get_header(); ?>
 
-  <?php $banner = get_field('banner'); ?>
+<?php $banner = get_field('banner'); ?>
 
   <div class="main-block" style="<?php echo 'background-image: url(' . $banner . ');'; ?>">
     <img class="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect2.svg" alt="rect">
@@ -31,34 +31,41 @@ Template Name: Home page
     <div class="pallet-services">
       <div class="container">
         <div class="row">
-          <div class="col-12"><a class="big-plate" href="/single-services.html"
-                                 style="background-image: url(../media/image/services/1.jpg)">
-              <div class="big-plate__name">Горизонтальное направленное бурение</div>
-              <div class="pallet-services__more"><span>Подробнее</span>
-                <div class="icon"></div>
-              </div>
-            </a></div>
-          <div class="col-12 col-lg-4"><a class="small-plate" href="/single-services.html"
-                                          style="background-image: url(../media/image/services/2.jpg)">
-              <div class="small-plate__name">Микротонеллирование</div>
-              <div class="pallet-services__more"><span>Подробнее</span>
-                <div class="icon"></div>
-              </div>
-            </a></div>
-          <div class="col-12 col-lg-4"><a class="small-plate" href="/single-services.html"
-                                          style="background-image: url(../media/image/services/3.jpg)">
-              <div class="small-plate__name">Строительство инжерных коммуникаций</div>
-              <div class="pallet-services__more"><span>Подробнее</span>
-                <div class="icon"></div>
-              </div>
-            </a></div>
-          <div class="col-12 col-lg-4"><a class="small-plate" href="/single-services.html"
-                                          style="background-image: url(../media/image/services/4.jpg)">
-              <div class="small-plate__name">Другие услуги</div>
-              <div class="pallet-services__more"><span>Подробнее</span>
-                <div class="icon"></div>
-              </div>
-            </a></div>
+
+
+          <?php
+          $args = array(
+            'numberposts' => -1,
+            'orderby' => 'date',
+            'order' => 'ASC',
+            'post_type' => 'services',
+            'suppress_filters' => true,
+          );
+
+          $posts = get_posts($args);
+
+          $services_count = 0;
+
+          foreach ($posts as $post) {
+            setup_postdata($post);
+            $services_count++;
+
+            ?>
+
+            <div class="<?php echo $services_count < 2 ? 'col-12' :  'col-12 col-lg-4'; ?>">
+              <a class="<?php echo $services_count < 2 ? 'big-plate' :  'small-plate'; ?>" href="<?php the_permalink(); ?>"
+                 style="<?php echo 'background-image: url(' . wp_get_attachment_url( get_post_thumbnail_id($post->ID) ) . ')'; ?>">
+                <div class="<?php echo $services_count < 2 ? 'big-plate__name' :  'small-plate__name'; ?>"><?php the_title(); ?></div>
+                <div class="pallet-services__more"><span>Подробнее</span>
+                  <div class="icon"></div>
+                </div>
+              </a>
+            </div>
+
+            <?php
+          }
+          wp_reset_postdata(); // сброс
+          ?>
         </div>
       </div>
     </div>
