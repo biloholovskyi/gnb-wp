@@ -33,13 +33,26 @@
       <div class="col-12">
         <div class="footer__top">
           <div class="footer__nav navigations">
-            <ul>
-              <li><a href="/services.pug">Услуги</a></li>
-              <li class="active"><a href="/about.html">О компании</a></li>
-              <li><a href="/cases.html">Наши работы</a></li>
-              <li><a href="/tools.html">Спецтехника</a></li>
-              <li><a href="/contacts.html">Контакты</a></li>
-            </ul>
+            <?php
+            wp_nav_menu([
+              'theme_location' => 'footer',
+              'menu' => '',
+              'container' => '',
+              'container_class' => '',
+              'container_id' => '',
+              'menu_class' => '',
+              'menu_id' => '',
+              'echo' => true,
+              'fallback_cb' => 'wp_page_menu',
+              'before' => '',
+              'after' => '',
+              'link_before' => '',
+              'link_after' => '',
+              'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+              'depth' => 0,
+              'walker' => '',
+            ]);
+            ?>
           </div>
           <div class="footer__socials">
             <a class="social" href="#">

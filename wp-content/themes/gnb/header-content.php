@@ -26,13 +26,26 @@
       <div class="logo__text">Управление механизацией №1</div>
     </a>
     <nav class="header__nav navigations">
-      <ul>
-        <li class="active"><a href="/services">Услуги</a></li>
-        <li><a href="/about">О компании</a></li>
-        <li><a href="/cases">Наши работы</a></li>
-        <li><a href="/tools">Спецтехника</a></li>
-        <li><a href="/contacts">Контакты</a></li>
-      </ul>
+      <?php
+      wp_nav_menu([
+        'theme_location' => 'header',
+        'menu' => '',
+        'container' => '',
+        'container_class' => '',
+        'container_id' => '',
+        'menu_class' => '',
+        'menu_id' => '',
+        'echo' => true,
+        'fallback_cb' => 'wp_page_menu',
+        'before' => '',
+        'after' => '',
+        'link_before' => '',
+        'link_after' => '',
+        'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'depth' => 0,
+        'walker' => '',
+      ]);
+      ?>
       <div class="main-button main-button--color header__navbutton btn-to-form">Связаться с нами</div>
     </nav>
   </div>

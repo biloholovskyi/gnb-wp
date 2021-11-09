@@ -134,7 +134,7 @@ $main-gray: #777;
         transition: all .3s;
       }
 
-      &.active {
+      &.current-menu-item {
         &::before {
           content: '';
           width: calc(100% + 4px);

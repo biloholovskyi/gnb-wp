@@ -7,10 +7,8 @@ remove_filter( 'the_excerpt', 'wpautop' );
 
 function menu()
 {
-//  register_nav_menu('header', 'Главное меню в шапке');
-//  register_nav_menu('footer', 'Меню в подвале');
-//  register_nav_menu('footer', 'Меню в подвале');
-//  register_nav_menu('footer_doc', 'Документы в подвале');
+  register_nav_menu('header', 'Меню в шапке');
+  register_nav_menu('footer', 'Меню в подвале');
   add_theme_support('post-thumbnails', array('services', 'cases'));
   add_filter('excerpt_more', function ($more) {
     return '';
