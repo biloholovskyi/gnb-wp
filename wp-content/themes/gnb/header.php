@@ -49,7 +49,28 @@
       <div class="main-button main-button--color header__navbutton btn-to-form">Связаться с нами</div>
     </nav>
   </div>
-  <div class="header__right"><a class="header__number" href="tel:88001111111">8 800 111 11 11</a>
+  <div class="header__right">
+    <?php
+    $args = array(
+      'numberposts' => 1,
+      'orderby' => 'date',
+      'order' => 'DESC',
+      'post_type' => 'main_contacts',
+      'suppress_filters' => true,
+    );
+
+    $posts = get_posts($args);
+
+    foreach ($posts as $post) {
+      setup_postdata($post);
+      $number = CFS()->get('main_phone');
+      $clear = preg_replace('![^0-9]+!', '', $number)
+      ?>
+      <a class="header__number" href="tel:<?php echo $clear; ?>"><?php echo $number; ?></a>
+      <?php
+    }
+    wp_reset_postdata(); // сброс
+    ?>
     <div class="main-button header__origin-button btn-to-form">Связаться с нами
       <div class="main-button__right-border"></div>
     </div>

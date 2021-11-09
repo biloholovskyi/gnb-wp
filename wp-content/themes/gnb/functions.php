@@ -115,6 +115,45 @@ function register_post_types()
     'rewrite' => true,
     'query_var' => true,
   ));
+
+  register_post_type('main_contacts', array(
+    'label' => null,
+    'labels' => array(
+      'name' => 'Основные Контакты', // основное название для типа записи
+      'singular_name' => 'Контакт', // название для одной записи этого типа
+      'add_new' => 'Добавить Контакт', // для добавления новой записи
+      'add_new_item' => 'Добавление Контакта', // заголовка у вновь создаваемой записи в админ-панели.
+      'edit_item' => 'Редактирование Контакта', // для редактирования типа записи
+      'new_item' => 'Новый Контакт', // текст новой записи
+      'view_item' => 'Смотреть Контакт', // для просмотра записи этого типа.
+      'search_items' => 'Искать Контакт', // для поиска по этим типам записи
+      'not_found' => 'Не найден Контакт', // если в результате поиска ничего не было найдено
+      'not_found_in_trash' => 'Не найден Контакт в корзине', // если не было найдено в корзине
+      'parent_item_colon' => '', // для родителей (у древовидных типов)
+      'menu_name' => 'Основные Контакты', // название меню
+    ),
+    'description' => '',
+    'public' => true,
+    'publicly_queryable' => true, // зависит от public
+    'exclude_from_search' => true, // зависит от public
+    'show_ui' => true, // зависит от public
+    'show_in_menu' => true, // показывать ли в меню адмнки
+    'show_in_admin_bar' => true, // по умолчанию значение show_in_menu
+    'show_in_nav_menus' => true, // зависит от public
+    'show_in_rest' => null, // добавить в REST API. C WP 4.7
+    'rest_base' => null, // $post_type. C WP 4.7
+    'menu_position' => 1,
+    'menu_icon' => 'dashicons-share',
+    //'capability_type'   => 'post',
+    //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
+    //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
+    'hierarchical' => false,
+    'supports' => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+    'taxonomies' => array(),
+    'has_archive' => false,
+    'rewrite' => true,
+    'query_var' => true,
+  ));
 }
 
 

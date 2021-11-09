@@ -55,23 +55,41 @@
             ?>
           </div>
           <div class="footer__socials">
-            <a class="social" href="#">
-              <div class="social__icon"
-                   style="<?php echo 'mask: url(' . get_template_directory_uri() . '/media/icon/facebook.svg) no-repeat center; -webkit-mask: url(' . get_template_directory_uri() . '/media/icon/facebook.svg) no-repeat center;-webkit-mask-size: contain;mask-size: contain' ?>"></div>
-            </a>
-            <a class="social" href="#">
-              <div class="social__icon"
-                   style="<?php echo 'mask: url(' . get_template_directory_uri() . '/media/icon/telegram.svg) no-repeat center; -webkit-mask: url(' . get_template_directory_uri() . '/media/icon/telegram.svg) no-repeat center;-webkit-mask-size: contain;mask-size: contain' ?>"></div>
-            </a>
-            <a class="social" href="#">
-              <div class="social__icon"
-                   style="<?php echo 'mask: url(' . get_template_directory_uri() . '/media/icon/viber.svg) no-repeat center; -webkit-mask: url(' . get_template_directory_uri() . '/media/icon/viber.svg) no-repeat center;-webkit-mask-size: contain;mask-size: contain' ?>"></div>
-            </a>
+            <?php
+            $args = array(
+              'numberposts' => 1,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_type' => 'main_contacts',
+              'suppress_filters' => true,
+            );
+
+            $posts = get_posts($args);
+
+            $political = '';
+
+            foreach ($posts as $post) {
+              setup_postdata($post);
+
+              $political = CFS()->get('political');
+
+              $socials = CFS()->get('socials');
+              foreach ($socials as $item) {
+                ?>
+                <a class="social" target="_blank" href="<?php echo $item['link']; ?>">
+                  <div class="social__icon"
+                       style="<?php echo 'mask: url(' . $item['icon'] . ') no-repeat center; -webkit-mask: url(' . $item['icon'] . ') no-repeat center;-webkit-mask-size: contain;mask-size: contain' ?>"></div>
+                </a>
+                <?php
+              }
+            }
+            wp_reset_postdata(); // сброс
+            ?>
           </div>
         </div>
         <div class="footer__bottom">
           <div class="footer__coop">2021 © ООО "Управление механизацией №1". Все права защищены</div>
-          <a class="footer__political" href="#" target="_blank">Политика конфиденциальности</a>
+          <a class="footer__political" href="<?php echo $political; ?>" target="_blank">Политика конфиденциальности</a>
         </div>
       </div>
     </div>
