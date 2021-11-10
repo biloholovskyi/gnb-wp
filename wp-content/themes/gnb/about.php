@@ -36,7 +36,9 @@ Template Name: About page
       </div>
     </div>
   </div>
-  <div class="about-map"><img class="about-map__decor-top" alt="decor" src="../media/icon/rect3.svg"><img class="about-map__decor-bottom" alt="decor" src="../media/icon/rect3.svg">
+  <div class="about-map">
+    <img class="about-map__decor-top" alt="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg">
+    <img class="about-map__decor-bottom" alt="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -376,28 +378,41 @@ Template Name: About page
       </div>
     </div>
   </div>
+
   <div class="cases-slider">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="cases-slider__title">Выполненые проекты</div>
           <div class="cases-slider__body owl-carousel owl-theme">
-            <div class="cases-slider__item"><img alt="case" src="../media/image/cases/2.jpg">
-              <div class="name">Название обьекта</div>
-              <div class="date">ГНБ, 2018</div>
-            </div>
-            <div class="cases-slider__item"><img alt="case" src="../media/image/cases/3.jpg">
-              <div class="name">Название обьекта</div>
-              <div class="date">ГНБ, 2018</div>
-            </div>
-            <div class="cases-slider__item"><img alt="case" src="../media/image/cases/4.jpg">
-              <div class="name">Название обьекта</div>
-              <div class="date">ГНБ, 2018</div>
-            </div>
-            <div class="cases-slider__item"><img alt="case" src="../media/image/cases/1.jpg">
-              <div class="name">Название обьекта</div>
-              <div class="date">ГНБ, 2018</div>
-            </div>
+            <?php
+            $args = array(
+              'numberposts' => -1,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_type' => 'cases',
+              'suppress_filters' => true,
+            );
+
+            $posts = get_posts($args);
+
+            foreach ($posts as $post) {
+              setup_postdata($post);
+              ?>
+
+              <div class="cases-slider__item">
+                <img alt="case" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>">
+                <div class="name"><?php the_title(); ?></div>
+                <div class="date"><?php the_field('date'); ?></div>
+                <div class="case-hidden">
+                  <div class="description"><?php the_content(); ?></div>
+                </div>
+              </div>
+
+              <?php
+            }
+            wp_reset_postdata(); // сброс
+            ?>
           </div>
         </div>
       </div>
@@ -406,13 +421,11 @@ Template Name: About page
   <div class="case-modal">
     <div class="body">
       <div class="close"></div>
-      <div class="body__info"><img src="../media/image/cases/1.jpg" alt="image">
+      <div class="body__info">
+        <img src="" alt="image">
         <div class="info-text">
           <div class="name">Название обьекта</div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae. Ut pharetra sit amet aliquam id. Nisl nisi scelerisque eu ultrices vitae auctor eu. Sit amet tellus cras adipiscing enim eu.</p>
-            <p>Tincidunt augue interdum velit euismod in pellentesque massa. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Pharetra sit amet aliquam id diam maecenas ultricies mi eget. Eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Leo vel fringilla est ullamcorper. Nisi scelerisque eu ultrices vitae auctor eu.</p>
-          </div>
+          <div class="desc"></div>
         </div>
       </div>
       <div class="body__form">
@@ -422,30 +435,46 @@ Template Name: About page
           <input type="text" name="name" placeholder="Ваше имя">
           <div class="label">Номер телефона</div>
           <input type="text" name="phone" placeholder="Номер телефона">
-          <button class="main-button main-button--color main-button--dark main-button--small" type="submit">Отправить</button>
+          <button class="main-button main-button--color main-button--dark main-button--small" type="submit">Отправить
+          </button>
         </form>
-        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных данных</div>
+        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных данных
+        </div>
       </div>
     </div>
   </div>
-  <div class="partners"><img class="partners__decor-top" alt="decor" src="../media/icon/rect3.svg"><img class="partners__decor-bot" alt="decor" src="../media/icon/rect3.svg">
+
+  <div class="partners">
+    <img class="partners__decor-top" alt="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg">
+    <img class="partners__decor-bot" alt="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="partners__title decor-title">Наши клиенты и партнеры</div>
           <div class="partners__row">
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/color.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/logo.png"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/netflix.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/color.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/logo.png"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/netflix.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/color.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/logo.png"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/netflix.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/color.svg"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/logo.png"></div>
-            <div class="partners__item"><img alt="logo" src="../media/icon/partners/netflix.svg"></div>
+            <?php
+            $args = array(
+              'numberposts' => -1,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_type' => 'clients',
+              'suppress_filters' => true,
+            );
+
+            $posts = get_posts($args);
+
+            foreach ($posts as $post) {
+              setup_postdata($post);
+              ?>
+
+              <div class="partners__item">
+                <img alt="logo" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>">
+              </div>
+
+              <?php
+            }
+            wp_reset_postdata(); // сброс
+            ?>
           </div>
         </div>
       </div>
