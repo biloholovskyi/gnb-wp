@@ -486,51 +486,35 @@ Template Name: About page
         <div class="col-12">
           <div class="reviews__title">Отзывы</div>
           <div class="reviews__body owl-carousel owl-theme">
-            <div class="reviews__item">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.</div>
-              <div class="author"><img src="../media/image/avatar.jpg" alt="avatar">
-                <div class="author__info">
-                  <div class="name">Дмитрий Танец</div>
-                  <div class="place">Директор ООО "Новоуральский Бетонный Завод"</div>
+            <?php
+            $args = array(
+              'numberposts' => -1,
+              'orderby' => 'date',
+              'order' => 'DESC',
+              'post_type' => 'reviews',
+              'suppress_filters' => true,
+            );
+
+            $posts = get_posts($args);
+
+            foreach ($posts as $post) {
+              setup_postdata($post);
+              ?>
+
+              <div class="reviews__item">
+                <div class="text"><?php the_field('review'); ?></div>
+                <div class="author"><img src="<?php the_field('photo') ?>" alt="avatar">
+                  <div class="author__info">
+                    <div class="name"><?php the_title(); ?></div>
+                    <div class="place"><?php the_field('place'); ?></div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="reviews__item">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.</div>
-              <div class="author"><img src="../media/image/about-bg.jpg" alt="avatar">
-                <div class="author__info">
-                  <div class="name">Дмитрий Танец</div>
-                  <div class="place">Директор ООО "Новоуральский Бетонный Завод"</div>
-                </div>
-              </div>
-            </div>
-            <div class="reviews__item">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.</div>
-              <div class="author"><img src="../media/image/about-bg.jpg" alt="avatar">
-                <div class="author__info">
-                  <div class="name">Дмитрий Танец</div>
-                  <div class="place">Директор ООО "Новоуральский Бетонный Завод"</div>
-                </div>
-              </div>
-            </div>
-            <div class="reviews__item">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.</div>
-              <div class="author"><img src="../media/image/about-bg.jpg" alt="avatar">
-                <div class="author__info">
-                  <div class="name">Дмитрий Танец</div>
-                  <div class="place">Директор ООО "Новоуральский Бетонный Завод"</div>
-                </div>
-              </div>
-            </div>
-            <div class="reviews__item">
-              <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu dui vivamus arcu felis bibendum ut tristique. Sed augue lacus viverra vitae.</div>
-              <div class="author"><img src="../media/image/about-bg.jpg" alt="avatar">
-                <div class="author__info">
-                  <div class="name">Дмитрий Танец</div>
-                  <div class="place">Директор ООО "Новоуральский Бетонный Завод"</div>
-                </div>
-              </div>
-            </div>
+
+              <?php
+            }
+            wp_reset_postdata(); // сброс
+            ?>
           </div>
         </div>
       </div>
