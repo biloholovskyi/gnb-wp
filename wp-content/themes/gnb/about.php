@@ -81,9 +81,9 @@ Template Name: About page
                 foreach ($posts as $post) {
                   setup_postdata($post);
 
-                  if(get_field('svg-1') !== '') {
+                  if (get_field('svg-1') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-1'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -94,9 +94,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-2') !== '') {
+                  if (get_field('svg-2') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-2'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -107,9 +107,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-3') !== '') {
+                  if (get_field('svg-3') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-3'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -120,9 +120,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-4') !== '') {
+                  if (get_field('svg-4') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-4'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -133,9 +133,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-5') !== '') {
+                  if (get_field('svg-5') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-5'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -146,9 +146,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-6') !== '') {
+                  if (get_field('svg-6') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-6'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -159,9 +159,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-7') !== '') {
+                  if (get_field('svg-7') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-7'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -172,9 +172,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-8') !== '') {
+                  if (get_field('svg-8') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-8'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -185,9 +185,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-9') !== '') {
+                  if (get_field('svg-9') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-9'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -198,9 +198,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-10') !== '') {
+                  if (get_field('svg-10') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-10'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -211,9 +211,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-11') !== '') {
+                  if (get_field('svg-11') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-11'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -224,9 +224,9 @@ Template Name: About page
                     <?php
                   }
 
-                  if(get_field('svg-12') !== '') {
+                  if (get_field('svg-12') !== '') {
                     ?>
-                    <path class="<?php if(get_field('active')) echo 'active'; ?>"
+                    <path class="<?php if (get_field('active')) echo 'active'; ?>"
                           d="<?php the_field('svg-12'); ?>"
                           data-name="<?php the_title(); ?>"
                           data-projects="<?php the_field('projects'); ?>"
@@ -563,8 +563,8 @@ Template Name: About page
                   d="M421.565 139.225C421.565 139.34 421.531 139.452 421.468 139.548C421.404 139.643 421.313 139.717 421.207 139.761C421.101 139.805 420.985 139.817 420.872 139.794C420.76 139.772 420.656 139.717 420.575 139.635C420.494 139.554 420.439 139.451 420.416 139.338C420.394 139.226 420.406 139.109 420.449 139.003C420.493 138.897 420.568 138.807 420.663 138.743C420.758 138.679 420.871 138.645 420.985 138.645C421.139 138.645 421.287 138.706 421.396 138.815C421.504 138.924 421.565 139.071 421.565 139.225Z"
                   fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
                 <path
-                      d="M419.739 144.056C419.739 144.102 419.725 144.148 419.699 144.186C419.674 144.225 419.637 144.255 419.594 144.272C419.552 144.29 419.505 144.295 419.459 144.286C419.414 144.277 419.372 144.254 419.339 144.222C419.307 144.189 419.285 144.147 419.275 144.102C419.266 144.057 419.271 144.01 419.289 143.967C419.306 143.924 419.336 143.888 419.375 143.862C419.413 143.836 419.459 143.823 419.505 143.823C419.567 143.823 419.626 143.847 419.67 143.891C419.714 143.935 419.739 143.994 419.739 144.056Z"
-                      fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
+                  d="M419.739 144.056C419.739 144.102 419.725 144.148 419.699 144.186C419.674 144.225 419.637 144.255 419.594 144.272C419.552 144.29 419.505 144.295 419.459 144.286C419.414 144.277 419.372 144.254 419.339 144.222C419.307 144.189 419.285 144.147 419.275 144.102C419.266 144.057 419.271 144.01 419.289 143.967C419.306 143.924 419.336 143.888 419.375 143.862C419.413 143.836 419.459 143.823 419.505 143.823C419.567 143.823 419.626 143.847 419.67 143.891C419.714 143.935 419.739 143.994 419.739 144.056Z"
+                  fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
                 <path
                   d="M418.63 143.182C418.63 143.433 418.483 143.641 418.31 143.641C418.137 143.641 417.998 143.433 417.998 143.182C417.998 142.931 418.137 142.723 418.31 142.723C418.483 142.723 418.63 142.922 418.63 143.182Z"
                   fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
@@ -824,8 +824,8 @@ Template Name: About page
                   d="M372.517 42.8923C372.162 42.8144 371.824 42.7018 371.478 42.5979C371.131 42.4941 370.889 42.4421 370.69 42.7105C370.491 42.9789 370.17 43.6888 370.508 44.0697C370.674 44.262 370.863 44.4335 371.071 44.5805C371.235 44.7017 371.426 44.7364 371.582 44.8576C371.907 45.192 372.332 45.4109 372.794 45.4809C373.054 45.4964 373.314 45.441 373.546 45.3205C373.778 45.2001 373.973 45.0192 374.11 44.797C374.167 44.6425 374.171 44.4732 374.121 44.3162C374.071 44.1592 373.969 44.0236 373.833 43.9312C373.571 43.7543 373.332 43.5448 373.123 43.3079C372.977 43.1007 372.762 42.9531 372.517 42.8923Z"
                   fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
                 <path
-                      d="M368.395 36.0094C367.832 36.1479 367.408 35.3514 367.14 34.9878C366.871 34.6242 366.499 34.122 365.954 34.2346C365.408 34.3471 365.218 34.6328 364.741 34.6155C364.154 34.516 363.554 34.516 362.966 34.6155C362.482 34.7713 362.404 35.1782 362.594 35.6198C362.785 36.0613 362.88 36.2085 362.594 36.5635C362.308 36.9184 361.902 37.2647 361.962 37.6889C362.023 38.1132 362.655 38.1565 362.992 38.1391C363.609 38.1 364.205 37.9032 364.724 37.5677C365.131 37.308 365.59 36.702 366.118 36.65C366.456 36.65 366.629 36.8665 366.802 37.1002C366.975 37.334 367.339 37.4552 367.581 37.6457C367.824 37.8361 367.893 38.0179 368.127 38.0699C368.334 38.0911 368.539 38.1258 368.742 38.1738C369.364 38.3864 370.005 38.5429 370.655 38.6413C371.172 38.8159 371.735 38.7974 372.24 38.5893C372.731 38.2586 373.094 37.7698 373.27 37.2041C373.312 37.1349 373.337 37.0571 373.345 36.9765C373.352 36.896 373.341 36.8148 373.313 36.7391C373.285 36.6633 373.24 36.595 373.181 36.5391C373.123 36.4832 373.052 36.4412 372.975 36.4163C372.032 35.8968 372.612 34.5722 372.006 33.819C371.829 33.6138 371.598 33.4622 371.339 33.3811C371.081 33.3 370.805 33.2928 370.542 33.3601C369.928 33.516 369.677 34.0874 369.408 34.6155C369.14 35.1436 368.958 35.8709 368.395 36.0094Z"
-                      fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
+                  d="M368.395 36.0094C367.832 36.1479 367.408 35.3514 367.14 34.9878C366.871 34.6242 366.499 34.122 365.954 34.2346C365.408 34.3471 365.218 34.6328 364.741 34.6155C364.154 34.516 363.554 34.516 362.966 34.6155C362.482 34.7713 362.404 35.1782 362.594 35.6198C362.785 36.0613 362.88 36.2085 362.594 36.5635C362.308 36.9184 361.902 37.2647 361.962 37.6889C362.023 38.1132 362.655 38.1565 362.992 38.1391C363.609 38.1 364.205 37.9032 364.724 37.5677C365.131 37.308 365.59 36.702 366.118 36.65C366.456 36.65 366.629 36.8665 366.802 37.1002C366.975 37.334 367.339 37.4552 367.581 37.6457C367.824 37.8361 367.893 38.0179 368.127 38.0699C368.334 38.0911 368.539 38.1258 368.742 38.1738C369.364 38.3864 370.005 38.5429 370.655 38.6413C371.172 38.8159 371.735 38.7974 372.24 38.5893C372.731 38.2586 373.094 37.7698 373.27 37.2041C373.312 37.1349 373.337 37.0571 373.345 36.9765C373.352 36.896 373.341 36.8148 373.313 36.7391C373.285 36.6633 373.24 36.595 373.181 36.5391C373.123 36.4832 373.052 36.4412 372.975 36.4163C372.032 35.8968 372.612 34.5722 372.006 33.819C371.829 33.6138 371.598 33.4622 371.339 33.3811C371.081 33.3 370.805 33.2928 370.542 33.3601C369.928 33.516 369.677 34.0874 369.408 34.6155C369.14 35.1436 368.958 35.8709 368.395 36.0094Z"
+                  fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
                 <path
                   d="M362.456 31.0659C362.646 31.672 362.75 32.7109 363.65 32.4685C364.089 32.2474 364.54 32.0508 365.001 31.8797C365.157 31.8598 365.315 31.8742 365.465 31.9221C365.614 31.97 365.752 32.0501 365.867 32.1568C366.057 32.3473 366.144 32.7195 366.49 32.5723C366.837 32.4252 366.629 32.1308 366.863 31.9836C367.096 31.8365 367.313 31.9836 367.408 32.2001C367.503 32.5837 367.633 32.9576 367.798 33.3169C368.239 34.0182 368.949 33.6632 369.218 33.0225C369.677 31.923 368.577 30.9793 367.685 30.5551C367.376 30.3958 367.055 30.2626 366.724 30.1569C366.373 30.0876 366.017 30.0528 365.659 30.053C364.663 29.9751 364.256 29.0227 363.417 28.6418C362.929 28.4248 362.375 28.4093 361.875 28.5985C361.572 28.7111 361.174 28.9275 361.252 29.3084C361.33 29.6894 361.685 29.9318 361.901 30.1742C362.149 30.4274 362.338 30.7318 362.456 31.0659Z"
                   fill="black" fill-opacity="0.08" stroke="#FAFAFA"></path>
@@ -975,7 +975,7 @@ Template Name: About page
 
               <div class="reviews__item">
                 <div class="text"><?php the_field('review'); ?></div>
-                <div class="author"><img src="<?php the_field('photo') ?>" alt="avatar">
+                <div class="author"><img src="<?php the_field('photo'); ?>" alt="avatar">
                   <div class="author__info">
                     <div class="name"><?php the_title(); ?></div>
                     <div class="place"><?php the_field('place'); ?></div>
@@ -1017,7 +1017,7 @@ Template Name: About page
 
             $posts = get_posts($args);
 
-            function get_filesize($file): string
+            function get_filesize($file)
             {
               // ошибка
               if (!file_exists($file)) return "Файл не найден";
@@ -1057,10 +1057,13 @@ Template Name: About page
 
               <div class="documents__item">
                 <?php $file = get_field('img'); ?>
+
                 <?php $format = explode('.', $file['url']); ?>
+
                 <img src="<?php echo $file['url']; ?>" alt="document">
                 <div class="name"><?php the_title(); ?></div>
-                <div class="form-size"><?php echo strtoupper($format[1]); ?> • <?php echo get_filesize(get_attached_file($file['ID'])); ?></div>
+                <div class="form-size"><?php echo strtoupper($format[2]); ?>
+                  • <?php echo get_filesize(get_attached_file($file['ID'])); ?></div>
               </div>
 
               <?php
