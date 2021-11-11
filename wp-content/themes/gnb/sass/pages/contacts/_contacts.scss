@@ -27,10 +27,6 @@
 
   &__map {
     position: absolute;
-    background-image: url(../media/image/map.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     top: 0;
     right: 0;
     width: 50%;
@@ -118,6 +114,7 @@
       top: -1px;
       left: 0;
       display: block;
+      z-index: 10;
     }
 
     &__title {
