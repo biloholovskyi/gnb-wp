@@ -83,17 +83,17 @@
     top: -10px;
 
     path {
-      cursor: pointer;
       transition: all .3s;
 
       &.active {
         fill: $yellow-main;
         fill-opacity: 1;
-      }
+        cursor: pointer;
 
-      &:hover {
-        fill: $yellow-main;
-        fill-opacity: .6;
+        &:hover {
+          fill: $yellow-main;
+          fill-opacity: .6;
+        }
       }
     }
   }

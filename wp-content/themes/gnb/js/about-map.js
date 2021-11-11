@@ -10,7 +10,11 @@ class AboutMap {
     })
   }
 
-  showInfo = () => {
+  showInfo = (e) => {
+    const current = $(e.currentTarget);
+    const count = +current.attr('data-projects') === 1 ? `${current.attr('data-projects')} выполненый проект` : `${current.attr('data-projects')} выполненых проекта`;
+    this.infoBlock.children('.name').text(current.attr('data-name'));
+    this.infoBlock.children('.count').text(count);
     this.infoBlock.addClass('active')
   }
 

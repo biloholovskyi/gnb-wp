@@ -103,7 +103,7 @@ $(document).ready((e) => {
   $(window).on('scroll', function () {header.scrollHeader($(this))})
 
   // about map
-  const mapItem = $('.about-map__map path');
+  const mapItem = $('.about-map__map path.active');
   mapItem.on('mousemove', (e) => aboutMap.moveInfo(e))
   mapItem.on('mouseenter', (e) => aboutMap.showInfo(e))
   mapItem.on('mouseleave', (e) => aboutMap.hiddenInfo(e))
