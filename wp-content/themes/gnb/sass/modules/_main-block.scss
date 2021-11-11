@@ -14,6 +14,10 @@
     bottom: -1px;
     left: 0;
     z-index: 5;
+
+    &--no-calc {
+      transform: rotate(180deg);
+    }
   }
 
   &::after {

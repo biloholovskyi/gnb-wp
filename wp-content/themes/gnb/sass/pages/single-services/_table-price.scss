@@ -6,6 +6,14 @@
   position: relative;
   background-color: #FAFAFA;
 
+  &--no-calc {
+    padding: 100px 0 278px 0;
+
+    .table-price__top-rect {
+      display: none;
+    }
+  }
+
   &__top-rect {
     width: 101%;
     position: absolute;
@@ -38,6 +46,7 @@
     line-height: 26px;
     font-family: $family-second;
     margin-bottom: 64px;
+    color: $main-dark;
 
     span {
       color: $main-dark;
