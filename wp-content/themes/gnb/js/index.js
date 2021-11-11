@@ -95,7 +95,7 @@ $(document).ready((e) => {
   })
 
   // show tools
-  $('.tools__item').on('click', tools.show)
+  $('.tools__item').on('click', (e) => {tools.show(e)})
   // switch category tools
   $('.tools__nav ul li a').on('click', function (e) {tools.switch(e, $(this))})
 

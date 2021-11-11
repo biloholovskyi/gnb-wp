@@ -52,6 +52,14 @@
     cursor: pointer;
     margin-bottom: 56px;
 
+    .tools-hidden {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
