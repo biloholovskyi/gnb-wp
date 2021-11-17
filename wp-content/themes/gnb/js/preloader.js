@@ -38,12 +38,12 @@ class Preloader {
 
   image_loaded = () => {
     this.images_loaded_count++;
-    this.percent = (100 / this.images_total_count) * this.images_loaded_count;
-    const k = 1000 - 575;
-    const p = k * this.percent / 100;
-    this.loader.css({
-      strokeDashoffset: 1000 - p
-    })
+    // this.percent = (100 / this.images_total_count) * this.images_loaded_count;
+    // const k = 1000 - 575;
+    // const p = k * this.percent / 100;
+    // this.loader.css({
+    //   strokeDashoffset: 1000 - p
+    // })
 
     if(this.images_loaded_count === this.images_total_count || this.images_loaded_count > this.images_total_count) {
       setTimeout(() => {

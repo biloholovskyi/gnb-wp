@@ -34,7 +34,14 @@
   &__loader {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    transition: all .3s;
+    animation: loading 5s ease-in-out infinite;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__fon {
+    z-index: 20;
+    position: relative;
   }
 }
 
@@ -50,5 +57,17 @@
       font-size: 18px;
       line-height: 26px;
     }
+  }
+}
+
+@keyframes loading {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -1000;
   }
 }
