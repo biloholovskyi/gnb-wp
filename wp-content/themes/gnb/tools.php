@@ -26,7 +26,7 @@ Template Name: Tools page
           <button class="main-button main-button--color main-button--dark main-button--small" type="submit">Отправить
           </button>
         </form>
-        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных данных
+        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку персональных данных
         </div>
       </div>
     </div>
@@ -39,30 +39,32 @@ Template Name: Tools page
           <h1 class="tools__title decor-title">Спецтехника</h1>
         </div>
         <div class="col-12 col-lg-3">
-          <div class="tools__nav">
-            <ul>
-              <li class="active"><a href="#all">Вся спецтехника</a>
+          <div class="tools__nav-wrapper">
+            <div class="tools__nav">
+              <ul>
+                <li class="active"><a href="#all">Вся спецтехника</a>
 
+                  <?php
+                  $args = array(
+                    'numberposts' => -1,
+                    'orderby' => 'date',
+                    'order' => 'ASC',
+                    'post_type' => 'tools-category',
+                    'suppress_filters' => true,
+                  );
+
+                  $posts = get_posts($args);
+
+                  foreach ($posts as $post) {
+                  setup_postdata($post);
+                  ?>
+                <li><a href="#<?php echo $post->ID; ?>"><?php the_title(); ?></a></li>
                 <?php
-                $args = array(
-                  'numberposts' => -1,
-                  'orderby' => 'date',
-                  'order' => 'ASC',
-                  'post_type' => 'tools-category',
-                  'suppress_filters' => true,
-                );
-
-                $posts = get_posts($args);
-
-                foreach ($posts as $post) {
-                setup_postdata($post);
+                }
+                wp_reset_postdata(); // сброс
                 ?>
-              <li><a href="#<?php echo $post->ID; ?>"><?php the_title(); ?></a></li>
-              <?php
-              }
-              wp_reset_postdata(); // сброс
-              ?>
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="col-12 col-lg-9">

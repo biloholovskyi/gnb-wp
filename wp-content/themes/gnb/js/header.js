@@ -6,7 +6,13 @@ class Header {
 
     const headerBlock = $('.header');
     if(scrollPoint > 300) {
-      headerBlock.addClass('header--shadow');
+      if($(window).width() > 575) {
+        headerBlock.addClass('header--shadow');
+      } else {
+        if($('tools__nav').length === '0') {
+          headerBlock.addClass('header--shadow');
+        }
+      }
 
       if(headerBlock.hasClass('main-header')) {
         headerBlock.addClass('header--content');
@@ -41,11 +47,13 @@ class Header {
     headerNav.toggleClass('active');
 
     if(headerNav.hasClass('active')) {
-      $('.header__humb img').attr('src', '../media/icon/close.svg')
+      $('.header__humb img').attr('src', 'http://gnb16.com/wp-content/themes/gnb/media/icon/close.svg')
         .addClass('active');
+      $('body, html').addClass('no-scroll')
     } else {
-      $('.header__humb img').attr('src', '../media/icon/humb.svg')
+      $('.header__humb img').attr('src', 'http://gnb16.com/wp-content/themes/gnb/media/icon/humb.svg')
         .removeClass('active')
+      $('body, html').removeClass('no-scroll')
     }
   }
 }

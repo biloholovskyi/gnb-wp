@@ -15,7 +15,7 @@ Template Name: Home page
         <div class="col-12 col-lg-8">
           <h1 class="main-block__title"><?php the_field('title'); ?></h1>
           <div class="main-block__desc"><?php the_field('subtitle') ?></div>
-          <div class="main-button main-button--color main-block__button">Заказать услугу</div>
+          <a href="http://gnb16.com/services/%d0%b3%d0%bd%d0%b1-%d0%b1%d1%83%d1%80%d0%b5%d0%bd%d0%b8%d0%b5/" class="main-block__link">Подробнее</a>
         </div>
       </div>
     </div>
@@ -132,7 +132,7 @@ Template Name: Home page
           <button class="main-button main-button--color main-button--dark main-button--small" type="submit">Отправить
           </button>
         </form>
-        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных данных
+        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку персональных данных
         </div>
       </div>
     </div>

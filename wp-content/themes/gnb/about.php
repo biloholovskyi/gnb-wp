@@ -911,7 +911,7 @@ Template Name: About page
           <button class="main-button main-button--color main-button--dark main-button--small" type="submit">Отправить
           </button>
         </form>
-        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных данных
+        <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку персональных данных
         </div>
       </div>
     </div>

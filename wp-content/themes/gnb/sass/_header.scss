@@ -80,6 +80,10 @@
     margin-left: 36px;
   }
 
+  &__scroll-button {
+    margin-right: 12px;
+  }
+
   &__humb {
     display: none;
   }
@@ -233,7 +237,7 @@
             margin-bottom: 36px;
           }
 
-          &.active {
+          &.current-menu-item {
             &::before {
               display: none;
             }

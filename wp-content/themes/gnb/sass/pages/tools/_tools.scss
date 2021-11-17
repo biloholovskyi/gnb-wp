@@ -287,8 +287,28 @@
 
 @media (max-width: 575px) {
   .tools {
+    overflow: visible;
+
+    &__nav-wrapper {
+      position: absolute;
+      width: calc(100vw - 24px);
+      height: 100vh;
+      top: 0;
+      left: 12px;
+    }
+
     &__nav {
-      width: calc(100vw - 12px);
+      background-color: #fff;
+      position: sticky;
+      top: 80px;
+      z-index: 20;
+      width: calc(100vw);
+      margin-left: -12px;
+      padding-left: 12px;
+    }
+
+    &__list {
+      margin-top: 80px;
     }
   }
 }

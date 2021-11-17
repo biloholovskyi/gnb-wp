@@ -88,7 +88,7 @@ $(document).ready((e) => {
 
   // close case modal after click on body
   $(document).on('click', function (e) {
-    const caseModal = $('.case-modal .body, .cases__item, .cases-slider__item, .tools__item');
+    const caseModal = $('.case-modal .body, .cases__item, .cases-slider__item, .tools__item, .header__humb');
     if (!caseModal.is(e.target) && caseModal.has(e.target).length === 0) {
       cases.closeCases();
     }

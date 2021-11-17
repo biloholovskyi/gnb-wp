@@ -68,11 +68,12 @@ $main-gray: #777;
     z-index: 2;
 
     &::before {
-      width: 12.84px;
-      height: 47.21px;
+      width: 13px;
+      height: 25.21px;
       transform: rotate(-30deg);
       left: auto;
-      right: 0;
+      right: -6px;
+      bottom: 2px;
       background-color: $yellow-main;
       z-index: -1;
     }
@@ -101,7 +102,7 @@ $main-gray: #777;
     padding: 10px 6.5px 10px 18.5px;
 
     &::before {
-      height: 44.21px;
+      height: 26.21px;
       width: 12.84px;
     }
   }

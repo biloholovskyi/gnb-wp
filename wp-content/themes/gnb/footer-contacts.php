@@ -16,7 +16,7 @@
           <textarea id="desc" name="desc"></textarea>
           <div class="main-form__submit-block">
             <button class="main-button main-button--color" type="submit">Отправить</button>
-            <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку своих персональных
+            <div class="form-desc">Нажимая на кнопку “Отправить”, вы даете согласие на обработку персональных
               данных
             </div>
           </div>
@@ -86,7 +86,7 @@
           </div>
         </div>
         <div class="footer__bottom">
-          <div class="footer__coop">2021 © ООО "Управление механизацией №1". Все права защищены</div>
+          <div class="footer__coop">2021 © ООО "Управление механизации №1". Все права защищены</div>
           <a class="footer__political" href="<?php echo $political; ?>" target="_blank">Политика конфиденциальности</a>
         </div>
       </div>
