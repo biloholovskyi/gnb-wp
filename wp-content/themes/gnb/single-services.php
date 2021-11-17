@@ -266,12 +266,13 @@
 
             foreach ($posts as $post) {
               setup_postdata($post);
+              $service = get_field('service');
               ?>
 
               <div class="cases-slider__item">
                 <img alt="case" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>">
                 <div class="name"><?php the_title(); ?></div>
-                <div class="date"><?php the_field('date'); ?></div>
+                <div class="date"><?php echo $service->post_title; ?>, <?php the_field('date'); ?></div>
                 <div class="case-hidden">
                   <div class="description"><?php the_content(); ?></div>
                 </div>

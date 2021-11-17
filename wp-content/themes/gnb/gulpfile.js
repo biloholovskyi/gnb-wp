@@ -30,7 +30,8 @@ gulp.task('default', function () {
     // server: {
     //     baseDir: "./"
     // }
-    proxy: 'http://localhost:8888/gnb-wp'
+    proxy: 'http://localhost:8888/gnb-wp',
+    browser: "google chrome",
   });
   gulp.watch("**/*.php").on('change', reload);
   gulp.watch("sass/**/*.scss", function () {

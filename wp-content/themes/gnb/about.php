@@ -870,12 +870,13 @@ Template Name: About page
 
             foreach ($posts as $post) {
               setup_postdata($post);
+              $service = get_field('service');
               ?>
 
               <div class="cases-slider__item">
                 <img alt="case" src="<?php echo wp_get_attachment_url(get_post_thumbnail_id($post->ID)); ?>">
                 <div class="name"><?php the_title(); ?></div>
-                <div class="date"><?php the_field('date'); ?></div>
+                <div class="date"><?php echo $service->post_title; ?>, <?php the_field('date'); ?></div>
                 <div class="case-hidden">
                   <div class="description"><?php the_content(); ?></div>
                 </div>
@@ -1054,17 +1055,15 @@ Template Name: About page
             foreach ($posts as $post) {
               setup_postdata($post);
               ?>
+              <?php $file = get_field('img'); ?>
+              <?php $format = explode('.', $file['url']); ?>
 
-              <div class="documents__item">
-                <?php $file = get_field('img'); ?>
-
-                <?php $format = explode('.', $file['url']); ?>
-
+              <a href="<?php echo $file['url']; ?>" download="<?php echo $file['filename']; ?>" class="documents__item">
                 <img src="<?php echo $file['url']; ?>" alt="document">
                 <div class="name"><?php the_title(); ?></div>
                 <div class="form-size"><?php echo strtoupper($format[2]); ?>
                   • <?php echo get_filesize(get_attached_file($file['ID'])); ?></div>
-              </div>
+              </a>
 
               <?php
             }
