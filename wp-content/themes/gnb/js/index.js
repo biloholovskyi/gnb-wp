@@ -118,6 +118,30 @@ $(document).ready((e) => {
 
   // stage tab
   $('.stage-work__tabs .tab-nav__item').on('click', (e) =>  {stageTabs.switchTab(e)})
+
+  // send form
+  $('#main-form').on('submit', function (e) {
+    e.preventDefault();
+
+    const form = $(this);
+
+    $.ajax({
+      type: "POST",
+      url: 'http://gnb16.com/wp-content/themes/gnb/message.php',
+      data: form.serialize(),
+      success: function(data)
+      {
+        $('.form-alert').css('display', 'flex');
+        $('input').val('');
+        $('textarea').val('');
+
+        setTimeout(() => {
+          $('.form-alert').css('display', 'none');
+        }, 1500)
+      }
+    });
+
+  })
 });
 
 $(window).resize(() => {

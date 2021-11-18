@@ -9,12 +9,12 @@
         </div>
       </div>
       <div class="col-12 col-md-6">
-        <form class="main-form__form">
+        <form class="main-form__form" id="main-form">
           <label for="name">Ваше имя</label>
           <input id="name" name="name" type="text">
-          <label for="phone">Ваше имя</label>
+          <label for="phone">Номер телефона</label>
           <input id="phone" name="phone" type="text">
-          <label for="name">Ваше имя</label>
+          <label for="name">Коментарий</label>
           <textarea id="desc" name="desc"></textarea>
           <div class="main-form__submit-block">
             <button class="main-button main-button--color" type="submit">Отправить</button>
@@ -27,6 +27,14 @@
     </div>
   </div>
 </div>
+
+<div class="form-alert">
+  <div class="form-alert__body">
+    <p>Спасибо!</p>
+    <p>Сообщение отправлено</p>
+  </div>
+</div>
+
 <footer class="footer">
   <div class="container">
     <div class="row">
