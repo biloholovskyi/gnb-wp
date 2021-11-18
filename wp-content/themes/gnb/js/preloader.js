@@ -1,3 +1,7 @@
+import MainBlock from "./main-block";
+
+const mainBlockClass = new MainBlock();
+
 class Preloader {
   constructor() {
     this.loader = $('.preloader__loader');
@@ -46,6 +50,8 @@ class Preloader {
     // })
 
     if(this.images_loaded_count === this.images_total_count || this.images_loaded_count > this.images_total_count) {
+      mainBlockClass.setHeight();
+
       setTimeout(() => {
         $('.preloader').css({
           opacity: 0

@@ -7,6 +7,7 @@
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  background-attachment: fixed;
 
   .decor {
     position: absolute;
@@ -119,9 +120,11 @@
 
 @media (max-width: 767px) {
   .main-block {
-    min-height: auto;
     padding-top: 144px;
     padding-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__title {
       font-size: 28px;

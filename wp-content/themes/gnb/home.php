@@ -9,7 +9,6 @@ Template Name: Home page
 <?php $banner = get_field('banner'); ?>
 
   <div class="main-block" style="<?php echo 'background-image: url(' . $banner . ');'; ?>">
-    <img class="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect2.svg" alt="rect">
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-8">
@@ -19,6 +18,7 @@ Template Name: Home page
         </div>
       </div>
     </div>
+    <img class="decor" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect2.svg" alt="rect">
   </div>
   <div class="services services--index">
     <div class="container">

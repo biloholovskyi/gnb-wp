@@ -7,6 +7,9 @@ import Tools from "./tools";
 import Calc from "./calc";
 import StageTabs from './stage-tabs'
 import Preloader from "./preloader";
+import MainBlock from "./main-block";
+
+const mainBlock = new MainBlock();
 
 $(document).ready((e) => {
   const cases = new Cases();
@@ -22,7 +25,7 @@ $(document).ready((e) => {
   (function () {
     header.scrollHeader(pageYOffset)
     calcBlock.length > 0 && calc.calculate();
-    preloader.setProgress(10)
+    preloader.setProgress(10);
   }())
 
 
@@ -118,5 +121,5 @@ $(document).ready((e) => {
 });
 
 $(window).resize(() => {
-
+  mainBlock.setHeight();
 });
