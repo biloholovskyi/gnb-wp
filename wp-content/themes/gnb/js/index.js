@@ -115,6 +115,7 @@ $(document).ready((e) => {
   $('.calc__form select').on('change', function () {calc.calculate()})
   $('.calc__form input').on('input', function () {calc.calculate()})
   $('#hitsaus .button').on('click', function () {calc.switchButton($(this))})
+  $('#calc-focus').on('click', function () {calc.onFocus()})
 
   // stage tab
   $('.stage-work__tabs .tab-nav__item').on('click', (e) =>  {stageTabs.switchTab(e)})

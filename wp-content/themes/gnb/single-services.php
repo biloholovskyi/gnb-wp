@@ -32,26 +32,31 @@
               <div class="input__item input__item--select">
                 <label for="material">Материал</label>
                 <select id="material" name="material">
-                  <option value="steel">Сталь</option>
-                  <option value="plastic">Пластик</option>
-                  <option value="wooden">Дерево</option>
+                  <option value="plastic">Полиэтилен</option>
+                  <option value="steel">Металл</option>
                 </select>
               </div>
-              <div class="input__item input__item--placeholder">
+              <div class="input__item input__item--select">
                 <label for="range">Диаметр труб</label>
-                <div class="border-wrapper">
-                  <input id="range" type="text" name="range" size="1" onkeydown="size=value.length+1||1"
-                         onkeyup="onkeydown()">
-                  <div class="placeholder">ММ</div>
-                  <div class="border"></div>
-                </div>
+                <div class="placeholder">ММ</div>
+                <select id="range" name="range">
+                  <option value="110">110</option>
+                  <option value="160">160</option>
+                  <option value="225">225</option>
+                  <option value="315">315</option>
+                  <option value="400">400</option>
+                  <option value="500">500</option>
+                  <option value="630">630</option>
+                  <option value="710">710</option>
+                  <option value="800">800</option>
+                </select>
               </div>
             </div>
             <div class="double">
               <div class="input__item input__item--placeholder">
                 <label for="long">Протяженность труб</label>
-                <div class="border-wrapper">
-                  <input id="long" type="text" name="long" size="1" onkeydown="size=value.length+1||1"
+                <div class="border-wrapper" id="calc-focus">
+                  <input id="long" type="text" value="10" name="long" size="2" onkeydown="size=value.length+1||1"
                          onkeyup="onkeydown()">
                   <div class="placeholder">ПМ</div>
                   <div class="border"></div>
