@@ -56,7 +56,7 @@
               <div class="input__item input__item--placeholder">
                 <label for="long">Протяженность труб</label>
                 <div class="border-wrapper" id="calc-focus">
-                  <input id="long" type="text" value="10" name="long" size="2" onkeydown="size=value.length+1||1"
+                  <input id="long" type="text" value="0" name="long" size="2" onkeydown="size=value.length+1||1"
                          onkeyup="onkeydown()">
                   <div class="placeholder">ПМ</div>
                   <div class="border"></div>

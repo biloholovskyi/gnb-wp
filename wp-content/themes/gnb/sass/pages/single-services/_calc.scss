@@ -159,6 +159,10 @@
       .buttons {
         width: 50%;
 
+        &--hidden {
+          display: none;
+        }
+
         &__label {
           font-style: normal;
           font-weight: 500;

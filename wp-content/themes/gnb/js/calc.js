@@ -64,9 +64,34 @@ class Calc {
   }
 
   calculate = () => {
+    let valueLong = this.longInput.val()
+
+    if (/\D/g.test(valueLong))
+    {
+      valueLong = valueLong.replace(/\D/g, '');
+    }
     const kef = this.material.find(m => m.name === this.materialInput.val())
-    const hitKef = this.hitsaus.children('.active').hasClass('button-yeas') ? +this.hitKefList.find(k => +k.k === +this.rangeInput.val()).result : 0;
-    const result = kef.kef.find(k => +k.k === +this.rangeInput.val()).result * +this.rangeInput.val() * +this.longInput.val() + hitKef;
+    let hitKef = this.hitsaus.children('.active').hasClass('button-yeas') ? +this.hitKefList.find(k => +k.k === +this.rangeInput.val()).result : 0;
+
+    // show and hidden buttons
+    if(this.materialInput.val() === 'steel') {
+      $('.calc__form .double .buttons').addClass('buttons--hidden');
+      $('.calc__form .double .input__item--placeholder').css('width', 'calc(50% - 12px)');
+      hitKef = 0;
+    } else {
+      $('.calc__form .double .buttons').removeClass('buttons--hidden');
+      $('.calc__form .double .input__item--placeholder').css('width', '50%');
+    }
+
+    if($(window).width() < 768) {
+      $('.calc__form .double .input__item--placeholder').css('width', '100%');
+    }
+
+    if(+valueLong < 1) {
+      hitKef = 0;
+    }
+
+    const result = kef.kef.find(k => +k.k === +this.rangeInput.val()).result * +this.rangeInput.val() * +valueLong + hitKef;
     let string = '';
     let count = 0;
     result.toString().split('').reverse().forEach(item => {

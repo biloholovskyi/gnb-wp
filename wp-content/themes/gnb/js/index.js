@@ -117,6 +117,15 @@ $(document).ready((e) => {
   $('#hitsaus .button').on('click', function () {calc.switchButton($(this))})
   $('#calc-focus').on('click', function () {calc.onFocus()})
 
+  // only number
+  $('input[name="long"]').keyup(function(e)
+  {
+    if (/\D/g.test(this.value))
+    {
+      this.value = this.value.replace(/\D/g, '');
+    }
+  });
+
   // stage tab
   $('.stage-work__tabs .tab-nav__item').on('click', (e) =>  {stageTabs.switchTab(e)})
 
