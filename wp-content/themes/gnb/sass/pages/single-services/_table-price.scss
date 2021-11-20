@@ -220,6 +220,10 @@
       thead {
         tr {
           td {
+            .td-body__name {
+              font-size: 10px;
+            }
+
             &:first-child {
               .td-body {
                 padding-left: 12px;

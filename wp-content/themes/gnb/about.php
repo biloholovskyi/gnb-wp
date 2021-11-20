@@ -53,15 +53,15 @@ Template Name: About page
             <div class="about-map__title">География работы</div>
             <div class="about-map__items">
               <div class="about-map__item">
-                <div class="count">1 234</div>
+                <div class="count"><?php the_field('complete_projects'); ?></div>
                 <div class="name">Выполненых проектов</div>
               </div>
               <div class="about-map__item">
-                <div class="count">125</div>
+                <div class="count"><?php the_field('years'); ?></div>
                 <div class="name">Лет опыта работы</div>
               </div>
               <div class="about-map__item">
-                <div class="count">1024</div>
+                <div class="count"><?php the_field('count_peoples'); ?></div>
                 <div class="name">Количество сотрудников</div>
               </div>
             </div>

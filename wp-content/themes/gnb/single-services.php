@@ -2,9 +2,16 @@
 
 <?php $banner = get_field('banner'); ?>
 
+<?php
+
+$gnb_tables = CFS()->get('gnb_prices_tables');
+$micro_tables = CFS()->get('micro_prices_tables');
+
+?>
+
   <div class="main-block" style="<?php echo 'background-image: url(' . $banner . ');'; ?>">
-    <img class="decor <?php echo get_field('calc') ? '' : 'decor--no-calc'; ?>"
-         src="<?php echo get_template_directory_uri(); ?>/media/icon/<?php echo get_field('calc') ? 'rect2.svg' : 'rect-gray.svg'; ?>"
+    <img class="decor <?php echo get_field('calc') ? '' : $micro_tables ?  'decor--no-calc' : ''; ?>"
+         src="<?php echo get_template_directory_uri(); ?>/media/icon/<?php echo get_field('calc') ? 'rect2.svg' : !$micro_tables ? 'rect2.svg' : 'rect-gray.svg'; ?>"
          alt="rect">
     <div class="container">
       <div class="row">
@@ -83,6 +90,9 @@
   <?php
 } ?>
 
+<?php if($gnb_tables) {
+  ?>
+
   <div class="table-price <?php echo get_field('calc') ? '' : 'table-price--no-calc'; ?>">
     <img class="table-price__top-rect" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg"
          alt="rect">
@@ -104,32 +114,41 @@
               </td>
               <td>
                 <div class="td-body">
-                  <div class="td-body__name">Объем работ</div>
-                  <div class="td-body__desc">до 250 м.п.</div>
+                  <div class="td-body__name">Стоимость работ</div>
+                  <div class="td-body__desc">Пластик</div>
                 </div>
               </td>
               <td>
-                <div class="td-body td-body--end">
-                  <div class="td-body__name"></div>
-                  <div class="td-body__desc">свыше 250 м.п.</div>
+                <div class="td-body">
+                  <div class="td-body__name">Стоимость работ</div>
+                  <div class="td-body__desc">Сталь</div>
                 </div>
+              </td>
+              <td>
+              <div class="td-body">
+                <div class="td-body__name">Сварка</div>
+                <div class="td-body__desc"></div>
+              </div>
               </td>
             </tr>
             </thead>
             <tbody>
             <?php
-            $prices = CFS()->get('prices');
-            foreach ($prices as $item) {
+
+            foreach ($gnb_tables as $item) {
               ?>
               <tr>
                 <td>
                   <div class="td-body"><?php echo $item['range']; ?></div>
                 </td>
                 <td>
-                  <div class="td-body"><?php echo $item['hardwork_small']; ?></div>
+                  <div class="td-body"><?php echo $item['price_plastic']; ?></div>
                 </td>
                 <td>
-                  <div class="td-body"><?php echo $item['hardwork_big']; ?></div>
+                  <div class="td-body"><?php echo $item['price_steel']; ?></div>
+                </td>
+                <td>
+                  <div class="td-body"><?php echo $item['hits']; ?></div>
                 </td>
               </tr>
               <?php
@@ -141,6 +160,74 @@
       </div>
     </div>
   </div>
+
+  <?php
+} ?>
+
+<?php if($micro_tables) {
+  ?>
+
+  <div class="table-price <?php echo get_field('calc') ? '' : 'table-price--no-calc'; ?>">
+    <img class="table-price__top-rect" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg"
+         alt="rect">
+    <img class="table-price__bottom-rect" src="<?php echo get_template_directory_uri(); ?>/media/icon/rect3.svg"
+         alt="rect">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="table-price__title"><?php echo CFS()->get('table-price_title'); ?></div>
+          <div class="table-price__desc"><?php echo CFS()->get('table-price_desc'); ?></div>
+          <table class="table-price__table">
+            <thead>
+            <tr>
+              <td>
+                <div class="td-body">
+                  <div class="td-body__name">Материал и диаметр трубы</div>
+                  <div class="td-body__desc"></div>
+                </div>
+              </td>
+              <td>
+                <div class="td-body">
+                  <div class="td-body__name">Стоимость работ</div>
+                  <div class="td-body__desc"></div>
+                </div>
+              </td>
+              <td>
+                <div class="td-body">
+                  <div class="td-body__name">Стоимость трубы</div>
+                  <div class="td-body__desc"></div>
+                </div>
+              </td>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+
+            foreach ($micro_tables as $item) {
+              ?>
+              <tr>
+                <td>
+                  <div class="td-body"><?php echo $item['material_and_range']; ?></div>
+                </td>
+                <td>
+                  <div class="td-body"><?php echo $item['price_works']; ?></div>
+                </td>
+                <td>
+                  <div class="td-body"><?php echo $item['price_material']; ?></div>
+                </td>
+              </tr>
+              <?php
+            }
+            ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <?php
+} ?>
 
   <div class="about-service">
     <div class="container">

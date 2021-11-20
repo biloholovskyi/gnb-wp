@@ -19,6 +19,8 @@ class Tools {
     $('.case-modal .body__info .info-text .desc').html(description)
     $('.case-modal .body__info img').attr('src', image)
 
+    $('.case-modal .body__form .title-form').text('Хотите арендовать технику? Напишите нам');
+
     this.modal.addClass('active');
 
     // deactivate scroll
