@@ -175,8 +175,8 @@ $micro_tables = CFS()->get('micro_prices_tables');
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <div class="table-price__title"><?php echo CFS()->get('table-price_title'); ?></div>
-          <div class="table-price__desc"><?php echo CFS()->get('table-price_desc'); ?></div>
+          <div class="table-price__title"><?php echo CFS()->get('table-price_title-micro'); ?></div>
+          <div class="table-price__desc"><?php echo CFS()->get('table-price_desc-micro'); ?></div>
           <table class="table-price__table">
             <thead>
             <tr>
